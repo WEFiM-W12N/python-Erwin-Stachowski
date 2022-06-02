@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:blanchedalmond;"></body>
+<h1> Keycap List </h1>
+
+{% for keycap in object_list %}
+<li>{{keycap.name}}</li>
+{% empty %}
+<li>No titles yet.</li>
+{% endfor %}
+</body>

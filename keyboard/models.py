@@ -4,18 +4,18 @@ from django.utils import timezone
 from django.utils.timezone import now
 
 
-class Keyboard(models.Model):
-    name = models.CharField(max_length=200)
+class Switche(models.Model):
+    name = models.CharField(max_length=200, null=True)
 
     def __str__(self):
         return self.name
 
 
-class Switche(models.Model):
+class Keyboard(models.Model):
     name = models.CharField(max_length=200, null=True)
-    description = models.TextField(max_length=400, null=True)
-    model = models.ForeignKey(Keyboard, on_delete=models.CASCADE, null=True)
-    keycap = models.ManyToManyField("Keycap", null=True)
+    size = models.TextField(max_length=200, null=True)
+    model = models.ForeignKey(Switche, on_delete=models.CASCADE, null=True)
+    keycap = models.ManyToManyField("Keycap")
 
     def __str__(self):
         return self.name

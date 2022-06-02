@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:blanchedalmond;"></body>
+<h1> Switches List </h1>
+
+{% for switche in object_list %}
+<li>{{switche.name}}</li>
+{% empty %}
+<li>No titles yet.</li>
+{% endfor %}
+</body>

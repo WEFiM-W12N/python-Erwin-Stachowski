@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:blanchedalmond;">
+    <h1> Create order </h1>
+
+    <form method="POST"> {%csrf_token %}
+        {{form.as_p}}
+        <input type='Submit' value='Save' />
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+h1 {
+    margin: 48px 0;
+    text-align: center;
+    color: #F44336;
+    text-transform: uppercase;
+}
+
+table {
+    counter-reset: rowNumber -1;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
